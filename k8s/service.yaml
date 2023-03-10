@@ -11,4 +11,5 @@ spec:
       targetPort: http
   selector:
     app: uku-gitops
+    version: v1
   type: ClusterIP
