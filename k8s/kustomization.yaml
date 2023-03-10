@@ -9,3 +9,6 @@ images:
 - name: uku-gitops
   newName: hyaroslav/uku_gitops
   newTag: latest3
+- name: uku_gitops
+  newName: hyaroslav/uku_gitops
+  newTag: a74c845d23937974eb820398360b8ccbecd20511
