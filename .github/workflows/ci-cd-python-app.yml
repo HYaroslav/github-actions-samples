@@ -95,7 +95,7 @@ jobs:
         role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }} # arn:aws:iam::455569863940:role/eks_test
         #role-external-id: ${{ secrets.AWS_ROLE_EXTERNAL_ID }}
         role-duration-seconds: 1200
-        role-session-name: UKU_SESSION
+        role-session-name: MySessionName
 
     - name: Test AWS
       run: |
