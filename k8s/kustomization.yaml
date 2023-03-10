@@ -8,4 +8,4 @@ namespace: hello-gitops
 images:
 - name: uku-gitops
   newName: hyaroslav/uku_gitops
-  newTag: latest
+  newTag: latest2
