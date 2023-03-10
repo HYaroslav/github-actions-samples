@@ -102,6 +102,7 @@ jobs:
           --region eu-north-1 \
           --name uku_gitops \
           --role-arn ${{ secrets.AWS_ROLE_TO_ASSUME }}
+        aws sts get-caller-identity
         kubectl get svc
 
     #- name: Create namespace & set in Kustomize
