@@ -6,6 +6,6 @@ resources:
 - ingress.yaml
 namespace: hello-gitops
 images:
-- name: uku-gitops
-  newName: hyaroslav/uku-gitops
+- name: uku_gitops
+  newName: hyaroslav/uku_gitops
   newTag: latest

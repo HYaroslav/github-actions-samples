@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: uku-gitops
-  name: uku-gitops
+    app: uku_gitops
+  name: uku_gitops
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: uku-gitops
+      app: uku_gitops
   template:
     metadata:
       labels:
-        app: uku-gitops
+        app: uku_gitops
     spec:
       containers:
-        - image: uku-gitops
-          name: uku-gitops
+        - image: uku_gitops
+          name: uku_gitops
           ports:
             - name: http
               containerPort: 8050

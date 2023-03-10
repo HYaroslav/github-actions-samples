@@ -67,7 +67,7 @@ jobs:
         file: ./app/Dockerfile
         builder: ${{ steps.buildx.outputs.name }}
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/uku-gitops:${{ github.sha }}, ${{ secrets.DOCKER_USERNAME }}/uku-gitops:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/uku_gitops:${{ github.sha }}, ${{ secrets.DOCKER_USERNAME }}/uku_gitops:latest
         cache-from: type=local,src=/tmp/.buildx-cache
         cache-to: type=local,dest=/tmp/.buildx-cache
 
@@ -92,7 +92,7 @@ jobs:
       run: |
        cd k8s
        kustomize edit set namespace hello-gitops
-       kustomize edit set image uku-gitops=$DOCKER_USERNAME/uku-gitops:$GITHUB_SHA
+       kustomize edit set image uku_gitops=$DOCKER_USERNAME/uku_gitops:$GITHUB_SHA
        cat kustomization.yaml
         
     - name: Commit files
