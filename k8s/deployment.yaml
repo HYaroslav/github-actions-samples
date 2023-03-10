@@ -2,17 +2,17 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: uku_gitops
-  name: uku_gitops
+    app: uku-gitops
+  name: uku-gitops
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: uku_gitops
+      app: uku-gitops
   template:
     metadata:
       labels:
-        app: uku_gitops
+        app: uku-gitops
     spec:
       containers:
         - image: uku_gitops
