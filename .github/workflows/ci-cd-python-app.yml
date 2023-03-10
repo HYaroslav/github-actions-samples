@@ -99,7 +99,7 @@ jobs:
 
     - name: Test AWS
       run: |
-        aws list-clusters
+        aws eks list-clusters
 
     - name: Update Kubernetes resources
       env:
