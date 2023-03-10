@@ -99,7 +99,10 @@ jobs:
 
     - name: Test AWS
       run: |
-        aws eks update-kubeconfig --region eu-north-1 --name uku_gitops
+        aws eks update-kubeconfig \
+          --region eu-north-1 \
+          --name uku_gitops \
+          --role_arn ${{ secrets.AWS_ROLE_TO_ASSUME }}
         kubectl get svc
 
     #- name: Create namespace & set in Kustomize
