@@ -11,4 +11,4 @@ images:
   newTag: latest3
 - name: uku_gitops
   newName: hyaroslav/uku_gitops
-  newTag: a74c845d23937974eb820398360b8ccbecd20511
+  newTag: fe5601094c302a088a19ab92430278de14919850
