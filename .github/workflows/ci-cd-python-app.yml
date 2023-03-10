@@ -99,7 +99,7 @@ jobs:
 
     - name: Test AWS
       run: |
-        echo aws list-clusters
+        aws list-clusters
 
     - name: Update Kubernetes resources
       env:
