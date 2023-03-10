@@ -15,8 +15,8 @@ spec:
         app: uku-gitops
     spec:
       containers:
-        - image: uku_gitops
-          name: uku_gitops
+        - image: uku-gitops
+          name: uku-gitops
           ports:
             - name: http
               containerPort: 8050
