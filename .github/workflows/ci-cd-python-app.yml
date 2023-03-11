@@ -104,7 +104,7 @@ jobs:
           --role-arn ${{ secrets.AWS_ROLE_TO_ASSUME }}
         aws sts get-caller-identity
         aws eks list-clusters
-        aws s3 list-buckets
+        aws s3 ls
         kubectl apply -k k8s/ 
 
     #- name: Create namespace & set in Kustomize
