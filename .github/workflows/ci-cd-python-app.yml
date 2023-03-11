@@ -105,7 +105,6 @@ jobs:
         aws sts get-caller-identity
         aws eks list-clusters
         aws eks get-token --cluster-name uku_eks_cluster
-        aws s3 ls
         kubectl apply -k k8s/ 
 
     #- name: Create namespace & set in Kustomize
