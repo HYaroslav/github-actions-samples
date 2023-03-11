@@ -98,6 +98,7 @@ jobs:
 
     - name: Test AWS
       run: |
+        cat ~/.kube/kubeconfig
         aws eks update-kubeconfig \
           --region eu-north-1 \
           --name uku_eks_cluster \
@@ -105,6 +106,9 @@ jobs:
         aws sts get-caller-identity
         aws eks list-clusters
         aws eks get-token --cluster-name uku_eks_cluster
+        cat ~/.kube/kubeconfig
+        cat ~/.aws/config
+        cat ~/.aws/credentials
         kubectl apply -k k8s/ 
 
     #- name: Create namespace & set in Kustomize
