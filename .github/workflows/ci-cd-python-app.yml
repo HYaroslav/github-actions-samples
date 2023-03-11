@@ -98,17 +98,15 @@ jobs:
 
     - name: Test AWS
       run: |
-        aws-iam-authenticator token -i uku_eks_cluster
-
-    #aws-iam-authenticator verify -t k8s-aws-v1.really_long_token -i uku_eks_cluster
-    #aws eks update-kubeconfig \
-    #  --region eu-north-1 \
-    #  --name uku_eks_cluster \
-    #  --role-arn ${{ secrets.AWS_ROLE_TO_ASSUME }}
-    #aws sts get-caller-identity
-    #aws eks list-clusters
-    #aws s3 ls
-    #kubectl apply -k k8s/ 
+        aws eks update-kubeconfig \
+          --region eu-north-1 \
+          --name uku_eks_cluster \
+          --role-arn ${{ secrets.AWS_ROLE_TO_ASSUME }}
+        aws sts get-caller-identity
+        aws eks list-clusters
+        aws eks get-token --cluster-name uku_eks_cluster
+        aws s3 ls
+        kubectl apply -k k8s/ 
 
     #- name: Create namespace & set in Kustomize
     #  run: |
