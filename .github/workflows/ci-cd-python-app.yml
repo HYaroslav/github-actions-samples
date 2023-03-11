@@ -98,7 +98,6 @@ jobs:
 
     - name: Test AWS
       run: |
-        cat ~/.kube/kubeconfig
         aws eks update-kubeconfig \
           --region eu-north-1 \
           --name uku_eks_cluster \
