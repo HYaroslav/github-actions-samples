@@ -99,7 +99,8 @@ jobs:
     - name: Create Cluster
       run: |
         aws eks create-cluster \
-          --name cli_cluster 
+          --name cli_cluster \
+	        --role-arn arn:aws:iam::455569863940:role/eks_test 
 
     #- name: Test AWS
     #  run: |
