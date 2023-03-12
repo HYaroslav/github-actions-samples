@@ -110,6 +110,10 @@ jobs:
           --name uku_eks_cluster \
           --role-arn ${{ secrets.AWS_ROLE_TO_ASSUME }}
         aws sts get-caller-identity
+        aws eks create-cluster \
+        --name cli_cluster \
+        --role-arn arn:aws:iam::455569863940:role/eks_test \
+        --resources-vpc-config subnetIds=subnet-0d8c646ac06013452,subnet-0e9329f87f83b2b53,subnet-0ce2ab90bba05a2ab
         kubectl get pods --namespace default
         kubectl apply -k k8s/
 
