@@ -109,6 +109,9 @@ jobs:
           --region eu-north-1 \
           --name uku_eks_cluster \
           --role-arn ${{ secrets.AWS_ROLE_TO_ASSUME }}
+        aws attach-role-policy \
+        --role-name uku_eks/GitHubActions \
+        --policy-arn arn:aws:iam::455569863940:policy/eks_policy
         kubectl apply -k k8s/
 
     #- name: Create namespace & set in Kustomize
