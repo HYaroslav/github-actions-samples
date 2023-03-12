@@ -98,7 +98,8 @@ jobs:
 
     - name: Create Cluster
       run: |
-        aws eks create-cluster 
+        aws eks create-cluster \
+          --name cli_cluster 
 
     #- name: Test AWS
     #  run: |
