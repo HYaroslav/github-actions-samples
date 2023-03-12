@@ -107,7 +107,7 @@ jobs:
       run: |
         aws eks update-kubeconfig \
           --region eu-north-1 \
-          --name cli_cluster \
+          --name uku_eks_cluster \
           --role-arn ${{ secrets.AWS_ROLE_TO_ASSUME }}
         kubectl apply -k k8s/
 
