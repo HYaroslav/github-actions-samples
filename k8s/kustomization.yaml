@@ -4,11 +4,11 @@ resources:
 - deployment.yaml
 - service.yaml
 - ingress.yaml
-namespace: python-app-green
+namespace: python-app-blue
 images:
 - name: uku-gitops
   newName: hyaroslav/uku_gitops
   newTag: f8dd5d3efcd3da90107e51f715a971f477ee36d5
 - name: uku_gitops
   newName: hyaroslav/uku_gitops
-  newTag: e1d523dd78b26f405e3c35843d4d90a1c10447da
+  newTag: 84ac72020afe6a6d3f79b97df961a4025209dcdd
