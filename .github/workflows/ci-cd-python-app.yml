@@ -92,16 +92,6 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: eu-north-1
-        #role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }} # arn:aws:iam::455569863940:role/eks_test
-        #role-external-id: ${{ secrets.AWS_ROLE_EXTERNAL_ID }}
-        #role-duration-seconds: 1200
-
-    #- name: Create Cluster
-    #  run: |
-    #    aws eks create-cluster \
-    #    --name cli_cluster \
-    #    --role-arn arn:aws:iam::455569863940:role/eks_eks \
-    #    --resources-vpc-config subnetIds=subnet-0d8c646ac06013452,subnet-0e9329f87f83b2b53,subnet-0ce2ab90bba05a2ab
 
     - name: Configure Kubeconfig
       run: |
@@ -109,7 +99,7 @@ jobs:
           --region eu-north-1 \
           --name uku_eks_cluster
 
-    - name: Create namespace & set in Kustomize
+    - name: Create namespace and edit Kustomize
       run: |
          namespacePresentBlue=`kubectl get ns | grep python-app-blue | wc -l`
          namespacePresentGreen=`kubectl get ns | grep python-app-green | wc -l`
